@@ -17,7 +17,6 @@ limitations under the License.
 import numpy as np
 import pandas as pd
 import pickle as pk
-from sklearn.svm import SVC
 from sklearn.ensemble import GradientBoostingClassifier
 
 rng = np.random.default_rng()
