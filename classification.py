@@ -2,6 +2,7 @@ import numpy as np
 import pandas as pd
 import pickle as pk
 from sklearn.svm import SVC
+from sklearn.ensemble import GradientBoostingClassifier
 
 rng = np.random.default_rng()
 df = pd.read_csv("dataset_heart.csv")
@@ -19,8 +20,10 @@ validation_variables = variables[split:, :]
 
 training_target = target[:split]
 validation_target = target[split:]
-
+'''
 classifier = SVC()
+'''
+classifier = GradientBoostingClassifier()
 classifier.fit(training_variables, training_target)
 accuracy = classifier.score(validation_variables, validation_target)
 
